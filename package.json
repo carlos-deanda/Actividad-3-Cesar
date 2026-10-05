@@ -4,24 +4,25 @@
   "description": "Actividad 3: Conexión y Navegación React Native con Cloud Firestore",
   "main": "App.js",
   "scripts": {
-    "start": "react-native start",
-    "android": "react-native run-android",
-    "ios": "react-native run-ios",
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
     "seed": "node scripts/seedFirestore.js",
-    "zip": "bash scripts/export_zip.sh"
+    "zip": "bash scripts/export_zip.sh",
+    "web": "expo start --web"
   },
   "dependencies": {
-    "@expo/metro-runtime": "^57.0.16",
+    "@expo/metro-runtime": "~57.0.16",
     "@react-navigation/native": "^7.5.0",
     "@react-navigation/native-stack": "^7.20.0",
     "expo": "^57.0.26",
     "firebase": "^10.14.1",
-    "react": "18.3.1",
-    "react-dom": "18.3.1",
-    "react-native": "0.74.5",
-    "react-native-safe-area-context": "^4.14.1",
-    "react-native-screens": "^3.37.0",
-    "react-native-web": "^0.21.3"
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "react-native": "0.86.3",
+    "react-native-safe-area-context": "~5.7.0",
+    "react-native-screens": "~4.26.0",
+    "react-native-web": "^0.21.2"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0"

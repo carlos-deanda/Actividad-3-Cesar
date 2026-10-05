@@ -16,27 +16,26 @@ import { getFirestore, doc, setDoc } from "firebase/firestore";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-// Importar configuración
-const configPath = resolve(__dirname, "../firebaseConfig.js");
-let firebaseConfig;
-
+// Cargar credenciales desde .env
 try {
-  const configFile = readFileSync(configPath, "utf-8");
-  // Extraer valores o usar objeto de configuración
-  const match = configFile.match(/const firebaseConfig = ({[\s\S]*?});/);
-  if (match) {
-    // Evaluar objeto simple de config
-    firebaseConfig = Function(`"use strict"; return (${match[1]})`)();
-  }
+  process.loadEnvFile(resolve(__dirname, "../.env"));
 } catch (err) {
-  console.error("❌ Error al leer firebaseConfig.js:", err.message);
+  console.error("❌ No se encontró el archivo .env. Copia .env.example como .env y llénalo.");
   process.exit(1);
 }
 
-if (!firebaseConfig || firebaseConfig.apiKey === "TU_API_KEY_AQUI") {
-  console.warn("⚠️ AVISO: Aún tienes los placeholders en 'firebaseConfig.js'.");
-  console.warn("   Reemplaza apiKey y projectId con tus credenciales reales de Firebase.");
-  console.warn("   Aun así, puedes revisar los datos en 'data/seedVehiculos.json'.\n");
+const firebaseConfig = {
+  apiKey: process.env.EXPO_PUBLIC_FIREBASE_API_KEY,
+  authDomain: process.env.EXPO_PUBLIC_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.EXPO_PUBLIC_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.EXPO_PUBLIC_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.EXPO_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.EXPO_PUBLIC_FIREBASE_APP_ID,
+};
+
+if (!firebaseConfig.apiKey || !firebaseConfig.projectId) {
+  console.error("❌ Faltan EXPO_PUBLIC_FIREBASE_API_KEY o EXPO_PUBLIC_FIREBASE_PROJECT_ID en .env.");
+  process.exit(1);
 }
 
 async function seed() {
