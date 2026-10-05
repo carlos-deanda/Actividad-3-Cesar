@@ -1,0 +1,11 @@
+{
+  "name": "Actividad3Vehiculos",
+  "displayName": "Actividad 3 - Vehículos Firebase",
+  "expo": {
+    "name": "Actividad 3 - Vehículos Firebase",
+    "slug": "actividad-3-vehiculos-firebase",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light"
+  }
+}

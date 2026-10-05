@@ -1,0 +1,30 @@
+# Dependencias
+node_modules/
+.bundle/
+vendor/
+
+# Expo & Metro
+.expo/
+.expo-shared/
+web-build/
+
+# Archivos y llaves sensibles de Firebase / Cloud
+google-services.json
+GoogleService-Info.plist
+*serviceAccountKey*.json
+.env
+.env.local
+.env.*.local
+
+# Builds nativos
+android/build/
+android/app/build/
+ios/build/
+ios/Pods/
+
+# Sistema y logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.DS_Store
+*.zip

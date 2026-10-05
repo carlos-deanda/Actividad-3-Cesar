@@ -1,0 +1,62 @@
+[
+  {
+    "id": "vehiculo-001",
+    "nombre": "Toyota RAV4 Hybrid Limited",
+    "marca": "Toyota",
+    "precio": 34900,
+    "descripcion": "Camioneta SUV híbrida con tracción integral AWD, tecnología de asistencia Toyota Safety Sense y rendimiento de 18.5 km/l.",
+    "anio": 2023,
+    "combustible": "Híbrido",
+    "color": "Blanco Perlado",
+    "imagenUrl": "https://images.unsplash.com/photo-1581540222194-0def2dda95b8?auto=format&fit=crop&w=800&q=80",
+    "disponible": true
+  },
+  {
+    "id": "vehiculo-002",
+    "nombre": "Tesla Model 3 Long Range",
+    "marca": "Tesla",
+    "precio": 41500,
+    "descripcion": "Sedán 100% eléctrico con aceleración de 0 a 100 km/h en 4.2 segundos, piloto automático y autonomía de hasta 629 km.",
+    "anio": 2024,
+    "combustible": "Eléctrico",
+    "color": "Gris Medianoche",
+    "imagenUrl": "https://images.unsplash.com/photo-1560958089-b8a1929cea89?auto=format&fit=crop&w=800&q=80",
+    "disponible": true
+  },
+  {
+    "id": "vehiculo-003",
+    "nombre": "Mazda CX-5 Signature",
+    "marca": "Mazda",
+    "precio": 29800,
+    "descripcion": "SUV con motor turbo Skyactiv-G de 227 HP, interiores en piel Nappa marrón y sistema de sonido Bose de 10 bocinas.",
+    "anio": 2023,
+    "combustible": "Gasolina",
+    "color": "Rojo Cristal",
+    "imagenUrl": "https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=800&q=80",
+    "disponible": true
+  },
+  {
+    "id": "vehiculo-004",
+    "nombre": "Honda Civic Touring",
+    "marca": "Honda",
+    "precio": 26500,
+    "descripcion": "Sedán compacto elegante con motor 1.5L Turbo de 180 HP, pantalla táctil de 9 pulgadas con Apple CarPlay inalámbrico y suite Honda Sensing.",
+    "anio": 2023,
+    "combustible": "Gasolina",
+    "color": "Azul Cósmico",
+    "imagenUrl": "https://images.unsplash.com/photo-1606016159991-dfe4f2746ad5?auto=format&fit=crop&w=800&q=80",
+    "disponible": true
+  },
+  {
+    "id": "vehiculo-005",
+    "nombre": "Ford Mustang GT Premium",
+    "marca": "Ford",
+    "precio": 52000,
+    "descripcion": "Deportivo icónico con motor Coyote V8 5.0L de 486 HP, escape con válvula activa y clúster digital personalizable de 12.4 pulgadas.",
+    "anio": 2024,
+    "combustible": "Gasolina",
+    "color": "Negro Sombra",
+    "imagenUrl": "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?auto=format&fit=crop&w=800&q=80",
+    "disponible": true
+  }
+]
