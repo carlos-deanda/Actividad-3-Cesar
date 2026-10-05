@@ -23,7 +23,9 @@ zip -r "$OUTPUT_ZIP" . \
   -x ".expo-shared/*" \
   -x "google-services.json" \
   -x "*serviceAccountKey*.json" \
-  -x ".env*" \
+  -x ".env" \
+  -x ".env.local" \
+  -x ".env.*.local" \
   -x ".git/*" \
   -x ".DS_Store" \
   -x "*/.DS_Store" \

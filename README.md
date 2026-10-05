@@ -7,7 +7,7 @@ Proyecto móvil desarrollado en **React Native** con **React Navigation (Stack N
 ## 📋 Cumplimiento de Requerimientos de la Actividad
 
 1. **Navegación Stack**: Estructurado con `@react-navigation/native-stack` (`HomeScreen` -> `DetailScreen`).
-2. **Conexión Firestore (`firebaseConfig.js`)**: Preparado con el SDK modular (`initializeApp`, `getFirestore`, `doc`, `getDoc`, `collection`, `getDocs`) y placeholders claros para las credenciales.
+2. **Conexión Firestore (`firebaseConfig.js`)**: Preparado con el SDK modular (`initializeApp`, `getFirestore`, `doc`, `getDoc`, `collection`, `getDocs`); las credenciales se leen de `.env`.
 3. **Colección y Documentos de Prueba**:
    - `data/seedVehiculos.json` con 5 vehículos completos (más de 4 campos cada uno: `nombre`, `marca`, `precio`, `descripcion`, `anio`, `combustible`, `color`, `imagenUrl`).
    - `scripts/seedFirestore.js` para sembrar la base de datos automáticamente con un solo comando.
@@ -65,18 +65,13 @@ npm install
 ```
 
 ### 2. Configurar Firebase Firestore
-Abre `firebaseConfig.js` y reemplaza los valores de `firebaseConfig` con las credenciales de tu proyecto en la [Consola de Firebase](https://console.firebase.google.com/):
+Las credenciales **no** están en el código. Copia `.env.example` como `.env` y llena los valores con los de tu proyecto en la [Consola de Firebase](https://console.firebase.google.com/):
 
-```javascript
-const firebaseConfig = {
-  apiKey: "AIzaSy...",
-  authDomain: "tu-proyecto.firebaseapp.com",
-  projectId: "tu-proyecto-id",
-  storageBucket: "tu-proyecto.appspot.com",
-  messagingSenderId: "123456789",
-  appId: "1:123456789:web:abcdef"
-};
+```bash
+cp .env.example .env
 ```
+
+`.env` está excluido de Git y del ZIP de entrega, así que la API key nunca se sube.
 
 > **Reglas de Seguridad de Firestore (Modo Prueba para la Actividad):**
 > En Firebase Console -> Cloud Firestore -> Pestaña *Reglas*:
@@ -103,20 +98,14 @@ npm run seed
 
 ---
 
-### 4. Iniciar la Aplicación
+### 4. Iniciar la Aplicación (Expo SDK 57)
 
-- **Con React Native CLI / Metro:**
-  ```bash
-  npm start
-  ```
-- **Con Android:**
-  ```bash
-  npm run android
-  ```
-- **Con Expo (si utilizas el cliente Expo Go):**
-  ```bash
-  npx expo start
-  ```
+```bash
+npm start          # abre Expo; escanea el QR con Expo Go
+npm run android    # emulador Android
+npm run ios        # simulador iOS
+npm run web        # navegador
+```
 
 ---
 

@@ -10,17 +10,17 @@ import {
 } from "firebase/firestore";
 
 // ============================================================================
-// CREDENCIALES DE FIREBASE (REEMPLAZAR CON LAS LLAVES DE TU CONSOLA DE FIREBASE)
-// Consola: https://console.firebase.google.com/ -> Configuración del proyecto
+// CREDENCIALES DE FIREBASE: se leen del archivo .env (no se sube a Git ni al ZIP)
+// Copia .env.example como .env y llena los valores de tu Consola de Firebase.
 // ============================================================================
 const firebaseConfig = {
-  apiKey: "AIzaSyCIxLw9NM1t7Gm_s9gf7QlaHpkT3c3f5Cs",
-  authDomain: "gestion-vehiculos-app.firebaseapp.com",
-  projectId: "gestion-vehiculos-app",
-  storageBucket: "gestion-vehiculos-app.firebasestorage.app",
-  messagingSenderId: "436767479513",
-  appId: "1:436767479513:web:6bf1d1699e18dea6c790c8",
-  measurementId: "G-C32WVMY7PL"
+  apiKey: process.env.EXPO_PUBLIC_FIREBASE_API_KEY,
+  authDomain: process.env.EXPO_PUBLIC_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.EXPO_PUBLIC_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.EXPO_PUBLIC_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.EXPO_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.EXPO_PUBLIC_FIREBASE_APP_ID,
+  measurementId: process.env.EXPO_PUBLIC_FIREBASE_MEASUREMENT_ID,
 };
 
 // Inicialización de la aplicación Firebase evitando duplicidad de instancias
